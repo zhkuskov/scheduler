@@ -8,6 +8,8 @@ import android.util.Log;
 
 import org.apache.cordova.CordovaPlugin;
 
+import android.content.Context;
+
 /*import com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePluginLogic.ExecuteResult;
 import com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePluginLogic.ExecuteStatus;*/
 
