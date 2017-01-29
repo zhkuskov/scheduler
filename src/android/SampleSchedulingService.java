@@ -16,6 +16,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.PluginResult;
 import org.apache.cordova.CordovaPlugin;
 
 /**
@@ -148,4 +150,10 @@ public class SampleSchedulingService extends IntentService {
         reader.close();
         return builder.toString();
     }
+
+
+/*private class Cordova extends CordovaPlugin{
+
+}*/
+
 }
