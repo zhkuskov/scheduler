@@ -24,7 +24,7 @@ SampleAlarmReceiver alarm = new SampleAlarmReceiver();
 
 /*-------------*/
    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
         if (action.equals("start")) {
 
