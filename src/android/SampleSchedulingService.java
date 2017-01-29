@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+import android.R;
 
 /**
  * This {@code IntentService} does the app's actual work.
