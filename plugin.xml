@@ -52,6 +52,7 @@
 		
 
         <source-file src="src/android/SchedulerPlugin.java" target-dir="src/com/example/android/scheduler" />
+      <source-file src="src/android/SchedulerActivity.java" target-dir="src/com/example/android/scheduler" />
        <source-file src="src/android/SampleAlarmReceiver.java" target-dir="src/com/example/android/scheduler" />
        <source-file src="src/android/SampleBootReceiver.java" target-dir="src/com/example/android/scheduler" />
        <source-file src="src/android/SampleSchedulingService.java" target-dir="src/com/example/android/scheduler" />
