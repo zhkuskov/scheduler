@@ -1,4 +1,4 @@
-package com.red_folder.phonegap.plugin.backgroundservice.twitter;
+package com.example.android.scheduler;
 
 import android.app.Activity;
 
