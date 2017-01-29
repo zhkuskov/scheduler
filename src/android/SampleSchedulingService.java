@@ -16,9 +16,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.PluginResult;
-import org.apache.cordova.CordovaPlugin;
 
 /**
  * This {@code IntentService} does the app's actual work.
@@ -80,7 +77,7 @@ public class SampleSchedulingService extends IntentService {
                this.getSystemService(Context.NOTIFICATION_SERVICE);
     
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-            new Intent(this, cordova.getActivity()/*MainActivity.class*/), 0);
+            new Intent(this, SchedulerActivity.class), 0);
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
@@ -152,8 +149,6 @@ public class SampleSchedulingService extends IntentService {
     }
 
 
-/*private class Cordova extends CordovaPlugin{
 
-}*/
 
 }
