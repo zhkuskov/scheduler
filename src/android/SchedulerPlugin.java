@@ -13,12 +13,7 @@ import com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePluginL
 
 public class SchedulerPlugin extends CordovaPlugin{
 
-	/*
-	 ************************************************************************************************
-	 * Static values 
-	 ************************************************************************************************
-	 */
-	private static final String TAG = BackgroundServicePlugin.class.getSimpleName();
+
 
 SampleAlarmReceiver alarm = new SampleAlarmReceiver();
 
@@ -38,7 +33,7 @@ cordova.getActivity().runOnUiThread(new Runnable() {
 
 Context context=cordova.getActivity().getApplicationContext();
 
-alarm.setAlarm(context);
+alarm.setAlarm(context, cordova.getActivity());
 
         } else if (action.equals("stop")) {
             /*cordova.getActivity().runOnUiThread(new Runnable() {
