@@ -65,7 +65,7 @@ Log.i(TAG, "не запущено никакое действие");
 }
         });
 
-        callbackContext.success();
+        command.success();
         return true;
 
 }catch (Exception ex) {
