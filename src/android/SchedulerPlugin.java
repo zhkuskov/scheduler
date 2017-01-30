@@ -18,13 +18,6 @@ public static final String TAG = "SchedulerPlugin";
 
 SampleAlarmReceiver alarm = new SampleAlarmReceiver();
 
-/*---------------*/
-@Override public void initialize(CordovaInterface cordova, CordovaWebView webView) { 
-super.initialize(cordova, webView); 
-
-
-// your init code here
- }
 /*-------------*/
    @Override
     public boolean execute(final String action, final JSONArray args, final CallbackContext command) {
