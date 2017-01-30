@@ -28,7 +28,7 @@ public static final String TAG = "SampleAlarmReceiver";
     @Override
     public void onReceive(Context context, Intent intent) {   
 
-
+Log.i(TAG, "метод onReceive");
         // BEGIN_INCLUDE(alarm_onreceive)
         /* 
          * If your receiver intent includes extras that need to be passed along to the

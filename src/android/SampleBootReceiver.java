@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import android.util.Log;
+
 /**
  * This BroadcastReceiver automatically (re)starts the alarm when the device is
  * rebooted. This receiver is set to be disabled (android:enabled="false") in the
@@ -16,6 +18,9 @@ public class SampleBootReceiver extends BroadcastReceiver {
     SampleAlarmReceiver alarm = new SampleAlarmReceiver();
     @Override
     public void onReceive(Context context, Intent intent) {
+
+Log.i("SampleBootReceiver", "метод onReceive");
+
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED"))
         {
             alarm.setAlarm(context);
