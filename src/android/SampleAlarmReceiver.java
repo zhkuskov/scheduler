@@ -51,10 +51,10 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
      * alarm fires, the app broadcasts an Intent to this WakefulBroadcastReceiver.
      * @param context
      */
-    public void setAlarm(Context context) {
+    public void setAlarm(/*Context context*/) {
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(context, SampleAlarmReceiver.class);
-        alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+        Intent intent = new Intent(/*context*/this, SampleAlarmReceiver.class);
+        alarmIntent = PendingIntent.getBroadcast(/*context*/this, 0, intent, 0);
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
@@ -103,8 +103,8 @@ alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
         
         // Enable {@code SampleBootReceiver} to automatically restart the alarm when the
         // device is rebooted.
-        ComponentName receiver = new ComponentName(context, SampleBootReceiver.class);
-        PackageManager pm = context.getPackageManager();
+        ComponentName receiver = new ComponentName(/*context*/this, SampleBootReceiver.class);
+        PackageManager pm = /*context*/this.getPackageManager();
 
         pm.setComponentEnabledSetting(receiver,
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
