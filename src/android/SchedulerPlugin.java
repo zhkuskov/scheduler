@@ -28,7 +28,7 @@ super.initialize(cordova, webView);
  }
 /*-------------*/
    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+    public boolean execute(final String action, final JSONArray args, final CallbackContext command) {
 
 try{
 
