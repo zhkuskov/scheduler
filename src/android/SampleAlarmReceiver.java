@@ -99,7 +99,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
                 calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);*/
 
 alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 
- SystemClock.elapsedRealtime() + 60*1000, AlarmManager.INTERVAL_HALF_HOUR,  alarmIntent);
+ AlarmManager.INTERVAL_HALF_HOUR, AlarmManager.INTERVAL_HALF_HOUR,  alarmIntent);
         
         // Enable {@code SampleBootReceiver} to automatically restart the alarm when the
         // device is rebooted.
