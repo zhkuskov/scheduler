@@ -38,7 +38,7 @@ cordova.getActivity().runOnUiThread(new Runnable() {
 
 /*Context context=cordova.getActivity().getApplicationContext();*/
 
-alarm.setAlarm(/*context*/);
+alarm.setAlarm(this);
 
         } else if (action.equals("stop")) {
             /*cordova.getActivity().runOnUiThread(new Runnable() {
