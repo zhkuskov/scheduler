@@ -1,4 +1,4 @@
-var exec = require('cordova/exec');
+/*var exec = require('cordova/exec');
 
 var scheduler = {
     start:function() {
@@ -9,4 +9,16 @@ var scheduler = {
     }
 };
 
-module.exports = scheduler;
+module.exports = scheduler;*/
+
+window.scheduler = function(scallback, ecallback) {
+
+ cordova.exec(
+scallback, 
+ecallback, 
+"SchedulerPlugin", 
+"start", 
+[]
+);
+
+ };
