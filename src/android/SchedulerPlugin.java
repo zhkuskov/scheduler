@@ -1,12 +1,14 @@
 package com.example.android.scheduler;
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 
 import android.util.Log;
 
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginResult;
 
 import android.content.Context;
 
@@ -29,6 +31,9 @@ super.initialize(cordova, webView);
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
 try{
+
+cordova.getThreadPool().execute(new Runnable() {
+            public void run() {
 
         if (action.equals("start")) {
 
@@ -56,6 +61,9 @@ alarm.setAlarm(context);
 Log.i(TAG, "не запущено никакое действие");
             return false;
         }//if
+
+}
+        });
 
         callbackContext.success();
         return true;
