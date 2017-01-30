@@ -59,7 +59,7 @@ Log.i(TAG, "не запущено никакое действие");
 			// Do something with the error in production code
 			Log.d(TAG, "ERROR");
 			Log.d(TAG, ex.getMessage());
-
+return false;
 		}//try
 
     }
