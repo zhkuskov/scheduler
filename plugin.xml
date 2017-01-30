@@ -20,6 +20,7 @@
     <platform name="android">
 
 	    <js-module src="www/scheduler.js" name="Scheduler">
+		<clobbers target="cordova.plugins.Scheduler" />
 		</js-module>
 
         <config-file target="res/xml/config.xml" parent="/*">
