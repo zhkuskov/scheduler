@@ -108,7 +108,7 @@ Log.i(TAG, "метод setAlarm");
                 calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);*/
 
 alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 
- AlarmManager.INTERVAL_HALF_HOUR, AlarmManager.INTERVAL_HALF_HOUR,  alarmIntent);
+ AlarmManager.INTERVAL_FIFTEEN_MINUTES, AlarmManager.INTERVAL_FIFTEEN_MINUTES,  alarmIntent);
         
         // Enable {@code SampleBootReceiver} to automatically restart the alarm when the
         // device is rebooted.
