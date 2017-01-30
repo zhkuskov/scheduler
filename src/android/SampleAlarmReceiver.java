@@ -17,6 +17,8 @@ import android.util.Log;
  * and then starts the IntentService {@code SampleSchedulingService} to do some work.
  */
 public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
+
+public static final String TAG = "SampleAlarmReceiver";
     // The app's AlarmManager, which provides access to the system alarm services.
     private AlarmManager alarmMgr;
     // The pending intent that is triggered when the alarm fires.
@@ -25,7 +27,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {   
 
-public static final String TAG = "SampleAlarmReceiver";
+
         // BEGIN_INCLUDE(alarm_onreceive)
         /* 
          * If your receiver intent includes extras that need to be passed along to the
