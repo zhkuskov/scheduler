@@ -59,7 +59,7 @@ alarm.setAlarm(context);
 */
         } else {
 Log.i(TAG, "не запущено никакое действие");
-            return false;
+          //  return false;
         }//if
 
 }
