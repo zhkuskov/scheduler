@@ -49,7 +49,13 @@
         <service android:name=".SampleSchedulingService" />
             
         </config-file>
-        
+ 
+      <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+            <intent-filter>
+                <action android:name="com.example.android.scheduler.ALARM" />
+                <category android:name="com.example.android.scheduler.DEFAULT" />
+            </intent-filter>
+        </config-file>       
 		
 
         <source-file src="src/android/SchedulerPlugin.java" target-dir="src/com/example/android/scheduler" />
