@@ -18,12 +18,15 @@ import com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePluginL
 public class SchedulerPlugin extends CordovaPlugin{
 
 public static final String TAG = "SchedulerPlugin";
+public static final Context context;
 
 SampleAlarmReceiver alarm = new SampleAlarmReceiver();
 
 /*---------------*/
 @Override public void initialize(CordovaInterface cordova, CordovaWebView webView) { 
 super.initialize(cordova, webView); 
+
+context = cordova.getActivity().getApplicationContext();
 // your init code here
  }
 /*-------------*/
@@ -46,7 +49,7 @@ cordova.getActivity().runOnUiThread(new Runnable() {
             });
 */
 
-Context context=cordova.getActivity().getApplicationContext();
+/*Context context=cordova.getActivity().getApplicationContext();*/
 
 alarm.setAlarm(context);
 
