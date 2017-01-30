@@ -23,6 +23,8 @@ SampleAlarmReceiver alarm = new SampleAlarmReceiver();
    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
+try{
+
         if (action.equals("start")) {
 
 Log.i(TAG, "запущено действие start");
@@ -48,10 +50,18 @@ alarm.setAlarm(context);
         } else {
 Log.i(TAG, "не запущено никакое действие");
             return false;
-        }
+        }//if
 
         callbackContext.success();
         return true;
+
+}catch (Exception ex) {
+			// Do something with the error in production code
+			Log.d(TAG, "ERROR");
+			Log.d(TAG, ex.getMessage());
+
+		}//try
+
     }
 
 
