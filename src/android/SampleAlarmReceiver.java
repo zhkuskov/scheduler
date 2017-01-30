@@ -72,9 +72,9 @@ Log.i(TAG, "метод setAlarm строка 68");
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
         // Set the alarm's trigger time to 8:30 a.m.
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
+     /*   calendar.set(Calendar.HOUR_OF_DAY, 8);
         calendar.set(Calendar.MINUTE, 30);
-  
+  */
         /* 
          * If you don't have precise time requirements, use an inexact repeating alarm
          * the minimize the drain on the device battery.
@@ -108,15 +108,15 @@ Log.i(TAG, "метод setAlarm строка 68");
         
         // Set the alarm to fire at approximately 8:30 a.m., according to the device's
         // clock, and to repeat once a day.
-        /*alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP,  
-                calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);*/
+        alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP,  
+                calendar.getTimeInMillis(), AlarmManager.INTERVAL_FIFTEEN_MINUTES, alarmIntent);
 /*
 alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 
  AlarmManager.INTERVAL_FIFTEEN_MINUTES, AlarmManager.INTERVAL_FIFTEEN_MINUTES,  alarmIntent);*/
 
-
+/*
 alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60*1000, alarmIntent);
-        
+        */
         // Enable {@code SampleBootReceiver} to automatically restart the alarm when the
         // device is rebooted.
         ComponentName receiver = new ComponentName(context, SampleBootReceiver.class);
