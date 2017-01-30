@@ -64,6 +64,9 @@ Log.i(TAG, "метод setAlarm");
 
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, SampleAlarmReceiver.class);
+
+Log.i(TAG, "метод setAlarm строка 68");
+
         alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
 
         Calendar calendar = Calendar.getInstance();
