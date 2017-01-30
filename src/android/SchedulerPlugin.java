@@ -18,7 +18,7 @@ import com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePluginL
 public class SchedulerPlugin extends CordovaPlugin{
 
 public static final String TAG = "SchedulerPlugin";
-public static final Context context;
+public Context context;
 
 SampleAlarmReceiver alarm = new SampleAlarmReceiver();
 
