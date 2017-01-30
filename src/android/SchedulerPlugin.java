@@ -19,6 +19,11 @@ public static final String TAG = "SchedulerPlugin";
 
 SampleAlarmReceiver alarm = new SampleAlarmReceiver();
 
+/*---------------*/
+@Override public void initialize(CordovaInterface cordova, CordovaWebView webView) { 
+super.initialize(cordova, webView); 
+// your init code here
+ }
 /*-------------*/
    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
@@ -36,9 +41,9 @@ cordova.getActivity().runOnUiThread(new Runnable() {
             });
 */
 
-/*Context context=cordova.getActivity().getApplicationContext();*/
+Context context=cordova.getActivity().getApplicationContext();
 
-alarm.setAlarm(this);
+alarm.setAlarm(context);
 
         } else if (action.equals("stop")) {
             /*cordova.getActivity().runOnUiThread(new Runnable() {
