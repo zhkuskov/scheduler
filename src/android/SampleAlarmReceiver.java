@@ -10,6 +10,8 @@ import android.support.v4.content.WakefulBroadcastReceiver;
 
 import java.util.Calendar;
 
+import android.util.Log;
+
 /**
  * When the alarm fires, this WakefulBroadcastReceiver receives the broadcast Intent 
  * and then starts the IntentService {@code SampleSchedulingService} to do some work.
@@ -22,6 +24,8 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
   
     @Override
     public void onReceive(Context context, Intent intent) {   
+
+public static final String TAG = "SampleAlarmReceiver";
         // BEGIN_INCLUDE(alarm_onreceive)
         /* 
          * If your receiver intent includes extras that need to be passed along to the
@@ -52,6 +56,9 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
      * @param context
      */
     public void setAlarm(Context context) {
+
+Log.i(TAG, "метод setAlarm");
+
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, SampleAlarmReceiver.class);
         alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
