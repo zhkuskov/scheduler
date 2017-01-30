@@ -11,6 +11,7 @@ import android.support.v4.content.WakefulBroadcastReceiver;
 import java.util.Calendar;
 
 import android.util.Log;
+import android.os.SystemClock;
 
 /**
  * When the alarm fires, this WakefulBroadcastReceiver receives the broadcast Intent 
@@ -106,9 +107,12 @@ Log.i(TAG, "метод setAlarm");
         // clock, and to repeat once a day.
         /*alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP,  
                 calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, alarmIntent);*/
-
+/*
 alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 
- AlarmManager.INTERVAL_FIFTEEN_MINUTES, AlarmManager.INTERVAL_FIFTEEN_MINUTES,  alarmIntent);
+ AlarmManager.INTERVAL_FIFTEEN_MINUTES, AlarmManager.INTERVAL_FIFTEEN_MINUTES,  alarmIntent);*/
+
+
+alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60*1000, alarmIntent);
         
         // Enable {@code SampleBootReceiver} to automatically restart the alarm when the
         // device is rebooted.
